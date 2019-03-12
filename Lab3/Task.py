@@ -1,4 +1,5 @@
 import os
+
 otvet_da = ('YES', "yes", "Yes", "Y" "y", "1")
 otvet_no = ("NO", "no", "No", "n", "N", "0")
 
@@ -33,6 +34,7 @@ def function():
 
     elif typeoffun == 2:
         answer()
+
         file = open("product.txt", "r")
         data = []
         for lines in file:
@@ -40,6 +42,7 @@ def function():
             lines = lines.split(';')
             data.append(lines)
         print(data)
+
         n = int(3)
 
         def sort_col(i):
@@ -52,6 +55,9 @@ def function():
         for i in data:
             print((i[0], i[1], i[2], i[3]))
         answer()
+
+    elif typeoffun == 3:
+        print("ничего")
 
     elif typeoffun == 4:
         answer()
@@ -76,7 +82,8 @@ def function():
             if vivod in otvet_da:
                 print(text_pol)
         elif boo in otvet_no:
-            format = input("Для каких целей открыте фаила? r - чтение, w - запись(удаление предыдущей записи), a - дозапись, b - открытие в двоичном режиме\n")
+            format = input(
+                "Для каких целей открыте фаила? r - чтение, w - запись(удаление предыдущей записи), a - дозапись, b - открытие в двоичном режиме\n")
             if format not in ['a', 'w', 'r', 'b']:
                 print('Ошибка! Неверные данные.')
             if format == "r" or "b":
