@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="235f1c59-86f8-40d4-bfe8-57b761076488" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Lab3/Task1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Task1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Task1.py" afterDir="false" />
-    </list>
+    <list default="true" id="235f1c59-86f8-40d4-bfe8-57b761076488" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/Lab1/Game.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -174,6 +169,14 @@
       <option name="presentableId" value="Default" />
       <updated>1552395142084</updated>
     </task>
+    <task id="LOCAL-00001" summary="Переделала Лабу1">
+      <created>1552396406647</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552396406647</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -187,6 +190,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" x="594" y="419" width="246" height="325" id="Project" order="0" visible="true" weight="0.12148148" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -198,7 +202,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3285124" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32997987" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
@@ -206,6 +210,10 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Переделала Лабу1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Переделала Лабу1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Lab3/__init__.py">
@@ -217,7 +225,7 @@
     <entry file="file://$PROJECT_DIR$/Lab1/Game.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
