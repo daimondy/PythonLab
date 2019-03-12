@@ -5,7 +5,7 @@ a = int(input("Введи промеждуток а: "))
 b = int(input("Введи промеждуток b: "))
 
 randomNumber = random.randint(a, b)
-guess_number = 0
+guess_number = a-1
 
 while guess_number != randomNumber:
     guess_number = int(input("Введи предпологаемое число "))
