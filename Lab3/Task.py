@@ -22,6 +22,7 @@ def function():
 
     if typeoffun == 0:
         exit(0)
+
     elif typeoffun == 1:
         answer()
         print(r"Введите путь к каталогу. Например: C:\Windows\System32")
@@ -90,14 +91,14 @@ def function():
 
     elif typeoffun == 4:
         answer()
-        boo = input("Записать новые данные в отдальный фаил?\n")
+        boo = input("Записать новые данные в отдельный фаил?\n")
         if boo in otvet_da:
             name = input('Имя фаила:\n') + '.txt'
             pol_file = open(name, "w")
             text_pol = input("Введите данные\n")
             pol_file.write(text_pol)
             pol_file.close()
-            pol_sort = input("Желаете отсортировать данные?")
+            pol_sort = input("Желаете отсортировать данные?\n")
             if pol_sort in otvet_da:
                 data = []
                 for plines in pol_file:
@@ -114,16 +115,16 @@ def function():
             format = input(
                 "Для каких целей открыте фаила? r - чтение, w - запись(удаление предыдущей записи), a - дозапись, "
                 "b - открытие в двоичном режиме\n")
-            if format not in ['a', 'w', 'r', 'b']:
-                print('Ошибка! Неверные данные.')
-            if format == "r" or "b":
+            if format in ['r', 'b']:
                 file = open("product.txt", format)
                 print(file)
-            else:
+            elif format  in ['a', 'w', 'r', 'b']:
                 file = open("product.txt", format)
                 text_file = input("Введите данные\n")
                 file.write('\n' + text_file)
                 file.close()
+            else:
+                print('Ошибка! Неверные данные.')
         else:
             print("Ошибка! Введены неверные данные.")
         answer()
