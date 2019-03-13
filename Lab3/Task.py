@@ -16,14 +16,16 @@ def answer():
 invalid_input = True
 
 
+
 def function():
     print("Для вызова функций введите:")
     typeoffun = int(input("0 - Выход из программы\n1 - Задача №1\n2 - Задача №2\n3 - Задача №3\n4 - Задача №4\n"))
+
     if typeoffun == 0:
         exit(0)
     elif typeoffun == 1:
         answer()
-        print(r"Введите путь к каталогу. Например:C:\Windows\System32")
+        print(r"Введите путь к каталогу. Например: C:\Windows\System32")
         path = input()
         for root, dirs, files in os.walk(path):
             print(root)
@@ -31,6 +33,7 @@ def function():
                 print(_dir)
             for _file in files:
                 print(_file)
+        answer()
 
     elif typeoffun == 2:
         answer()
@@ -43,21 +46,16 @@ def function():
             data.append(lines)
         print(data)
 
-        n = int(3)
 
-        def sort_col(i):
-            return i[n]
-
-        t = input('Сортировать по возрастанию (0) или по убыванию (1)?:\n')
+        t = input('Отсортировать по возрастанию (0) или по убыванию (1)?\n')
         t = int(t)
-        data.sort(key=lambda i: i[n], reverse=t)
-        data.sort(key=sort_col)
-        for i in data:
-            print((i[0], i[1], i[2], i[3]))
+        data.sort(key=lambda line: int(line[3]), reverse=t)
+        for i in range(0,len(data)):
+            print(data[i])
         answer()
 
     elif typeoffun == 3:
-        print("ничего")
+        print('Не готово')
 
     elif typeoffun == 4:
         answer()
