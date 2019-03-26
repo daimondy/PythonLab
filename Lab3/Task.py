@@ -75,7 +75,6 @@ def dannie():
             pol_file1.write("\n")
             for j in range(0, len(data)):
                 pol_file1.write(str(data[i][j]))
-                pol_file1.write(' ')
         file.close()
     elif boo in otvet_no:
         pol_file2 = open('product.txt', 'w', encoding='utf-8')
@@ -83,7 +82,6 @@ def dannie():
             pol_file2.write("\n")
             for j in range(0, len(data)):
                 pol_file2.write(str(data[i][j]))
-                pol_file2.write(' ')
         file.close()
     answer()
 
