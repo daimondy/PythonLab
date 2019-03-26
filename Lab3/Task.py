@@ -62,23 +62,24 @@ def dannie():
         pol_file1 = open(name, "w", encoding='utf-8')
         for i in range(0, len(data)):
             pol_file1.write('\n')
-            for j in range(0, len(data)):
+            for j in range(0, len(data[0])):
                 pol_file1.write(str(data[i][j]) + ';')
         boo = input('Вывести данные?\n')
         if boo in otvet_da:
-            print(pol_file1)
+            print(data)
         file.close()
     elif boo in otvet_no:
         pol_file2 = open('product.txt', 'r+', encoding='utf-8')
         for i in range(0, len(data)):
-            for j in range(0, len(data)):
+            pol_file2.write('\n')
+            for j in range(0, len(data[0])):
                 pol_file2.write(str(data[i][j]) + ';')
         file.close()
         print('Данные сохранены в фаил product.txt')
     answer()
 
 #начало программы
-file = open("product.txt", "r")
+file = open("product.txt", "r", encoding='utf-8')
 data = []
 for lines in file:
     lines = lines.strip()
