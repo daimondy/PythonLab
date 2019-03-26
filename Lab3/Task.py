@@ -20,6 +20,7 @@ def katalog():
     dir = input()
     print(len([name for name in os.listdir(dir)
                if os.path.isfile(os.path.join(dir, name))]))
+    answer()
 
 def sortirovka():
     t = input('Отсортировать по возрастанию (0) или по убыванию (1)?\n')
@@ -101,10 +102,3 @@ while mean:
         increase()
     elif typeoffun == 4:
         dannie()
-
-
-
-
-
-
-
