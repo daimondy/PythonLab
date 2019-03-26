@@ -1,29 +1,26 @@
 # coding=utf-8
 import os, os.path
 
-otvet_da = ('YES', "yes", "Yes", "Y" "y", "1")
-otvet_no = ("NO", "no", "No", "n", "N", "0")
+otvet_da = ('YES', "yes", "Yes", "Y" "y", "1")     #значение, означ. да
+otvet_no = ("NO", "no", "No", "n", "N", "0")       #значение, означ. нет
 
-
+#вопрос
 def answer():
     polzov_otvet = input("Вы хотите продолжить?\n")
     if polzov_otvet in otvet_da:
-        invalid_input = True
+        mean = True
     elif polzov_otvet in otvet_no:
+        mean = False
         exit(0)
     return polzov_otvet
 
-
-invalid_input = True
-
-
+#4 функции
 def katalog():
     answer()
     print(r"Введите путь к каталогу. Например: C:\Windows\System32")
     dir = input()
     print(len([name for name in os.listdir(dir)
                if os.path.isfile(os.path.join(dir, name))]))
-
 
 def sortirovka():
     answer()
@@ -41,15 +38,8 @@ def sortirovka():
         print(data[i])
     answer()
 
-
 def increase():
     answer()
-    file = open("product.txt", "r")
-    data = []
-    for lines in file:
-        lines = lines.strip()
-        lines = lines.split(';')
-        data.append(lines)
     number = []
     max_number = int(data[len(data) - 1][0])
     stop_words = ['STOP', 'stop', 'Stop', 'ALL', 'all', 'All']
@@ -69,42 +59,45 @@ def increase():
             processing = False
         else:
             print('Вы ввели не число или не стоп-слово!')
-
     increase = int(input('Введите на сколько вы хотите увеличить цену выбранных вами товаров:\n'))
     for i in range(0, len(number)):
         data[number[i]][2] = int(data[number[i]][2]) + increase
     print(data)
-    dannie(data)
     answer()
 
-
-def dannie(data):
+def dannie():
+    answer()
     boo = input("Записать новые данные в отдельный фаил?\n")
     if boo in otvet_da:
-        data = []
-        for lines in file:
-            lines = lines.strip()
-            lines = lines.split(';')
-            data.append(lines)
-        name = input('Имя фаила:\n') + '.txt'
-        pol_file = open(name, "w")
-        pol_file.write(str(data))
-        pol_file.close()
-        vivod = input("Вывести данные?\n")
-        if vivod in otvet_da:
-            print(data)
+        name = input('Введите имя фаила:\n') + '.txt'
+        pol_file1 = open(name, "w" , encoding='utf-8')
+        for i in range(0, len(data)):
+            pol_file1.write("\n")
+            for j in range(0, len(data)):
+                pol_file1.write(str(data[i][j]))
+                pol_file1.write(' ')
+        file.close()
     elif boo in otvet_no:
-        pol_file = open("product.txt", "w")
-        pol_file.write(str(data))
-        pol_file.close()
-        print(data)
-    else:
-        print("Ошибка! Введены неверные данные.")
+        pol_file2 = open('product.txt', 'w', encoding='utf-8')
+        for i in range(0, len(data)):
+            pol_file2.write("\n")
+            for j in range(0, len(data)):
+                pol_file2.write(str(data[i][j]))
+                pol_file2.write(' ')
+        file.close()
     answer()
 
-
-def function():
-    print("Для вызова функций введите:")
+#начало программы
+mean = True
+while mean:
+    file = open("product.txt", "r")
+    data = []
+    for lines in file:
+        lines = lines.strip()
+        lines = lines.split(';')
+        data.append(lines)
+    #меню
+    print("Для вызова функций введите: ")
     typeoffun = int(input("0 - Выход из программы\n1 - Задача №1\n2 - Задача №2\n3 - Задача №3\n4 - Задача №4\n"))
     if typeoffun == 0:
         exit(0)
@@ -116,10 +109,10 @@ def function():
         increase()
     elif typeoffun == 4:
         dannie()
-    while invalid_input:
-        function()
 
 
-function()
 
-print('памагите')
+
+
+
+
