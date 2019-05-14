@@ -10,7 +10,7 @@ print("Ожидание ответа от клиента...")
 clientConn, clientAddr = server.accept()
 print("Подключенный клиент:", clientAddr)
 
-previous_msg = 'Поступившего ранее сообщения не было'
+previous_msg = 'Поступившего ранее сообщения не было.'
 
 while True:
     msg = clientConn.recv(1024).decode()

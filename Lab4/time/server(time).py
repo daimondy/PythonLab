@@ -10,10 +10,8 @@ print("Сервер запущен.")
 print("Ожидание ответа от клиента...")
 clientConn, clientAddr = server.accept()
 print("Подключенный клиент:", clientAddr)
-while True:
-    data = clientConn.recv(1024)
-    msg = data.decode()
-    if msg == 'datetime':
-        clientConn.send(strftime("%Y-%m-%d %H:%M:%S", gmtime()).encode())
-    print("Клиент отключен.")
-    clientConn.close()
+msg = clientConn.recv(1024).decode()
+if msg == 'datetime':
+    clientConn.send(strftime("%Y-%m-%d %H:%M:%S", gmtime()).encode())
+print("Клиент отключен.")
+clientConn.close()
